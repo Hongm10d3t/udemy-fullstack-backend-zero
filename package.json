@@ -1,0 +1,27 @@
+{
+  "name": "full-backend-zero",
+  "version": "1.0.0",
+  "description": "Vu Dinh Hong-m10",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hongm10d3t/udemy-fullstack-backend-zero.git"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "Vu Dinh Hong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hongm10d3t/udemy-fullstack-backend-zero/issues"
+  },
+  "homepage": "https://github.com/Hongm10d3t/udemy-fullstack-backend-zero#readme",
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
