@@ -1,0 +1,1 @@
+console.log("Hello word with eric & Hoi dan it")
