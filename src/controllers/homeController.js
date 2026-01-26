@@ -1,20 +1,16 @@
 
 const connection = require('../config/database');
 const getHomepage = (req, res) => {
-    let users = [];
-    connection.query(
-        'select * from Users',
-        function (err, results, fields) {
-            users = results;
-            console.log('>>>result in homePage = ', results)
-            // console.log(">>>check Users:", users);
-            res.send(JSON.stringify(users))
-        }
-    );
+    return res.render('home.ejs')
 }
 const getHoidanit = (req, res) => {
     res.render('sample.ejs')
 }
+const postCreateUser = (req, res) => {
+    console.log(">>>> req.body:", req.body)
+    res.send("Create a new user")
+
+}
 module.exports = {
-    getHomepage, getHoidanit
+    getHomepage, getHoidanit, postCreateUser
 }
