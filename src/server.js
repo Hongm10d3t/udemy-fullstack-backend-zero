@@ -24,12 +24,12 @@ app.use('/', webRoutes)
 // test connection
 
 
-connection.query(
-    'select * from Users',
-    function (err, results, fields) {
-        console.log('>>>results = ', results)
-    }
-);
+// connection.query(
+//     'select * from Users',
+//     function (err, results, fields) {
+//         console.log('>>>results = ', results)
+//     }
+// );
 
 
 app.listen(port, hostname, () => {
