@@ -12,24 +12,19 @@ const port = process.env.PORT || 8888 // port
 const hostname = process.env.HOST_NAME
 
 // config req.body
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+// app.use(express.json())
+// app.use(express.urlencoded({ extended: true }))
 
-// config template engine
-configViewEngine(app)
+// // config template engine
+// configViewEngine(app)
 
-// khai báo route
-app.use('/', webRoutes)
+// // khai báo route
+// app.use('/', webRoutes)
 
 // test connection
 
+connection();
 
-// connection.query(
-//     'select * from Users',
-//     function (err, results, fields) {
-//         console.log('>>>results = ', results)
-//     }
-// );
 
 
 app.listen(port, hostname, () => {
