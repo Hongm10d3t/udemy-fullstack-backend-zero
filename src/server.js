@@ -6,27 +6,22 @@ require('dotenv').config();
 const configViewEngine = require('./config/viewEngine');
 const webRoutes = require('./routes/web');
 const connection = require('./config/database');
-const Kitten = require('./models/Kitten')
 // code
 const app = express() // app express
 const port = process.env.PORT || 8888 // port
 const hostname = process.env.HOST_NAME
 
 // config req.body
-// app.use(express.json())
-// app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
 
 // // config template engine
-// configViewEngine(app)
+configViewEngine(app)
 
 // // khai báo route
-// app.use('/', webRoutes)
+app.use('/', webRoutes);
 
 // test connection
-
-
-const cat = new Kitten({ name: 'Hoi dan it cat' });
-cat.save();
 
 
 (async () => {
@@ -38,4 +33,4 @@ cat.save();
     } catch (error) {
         console.log(">>> Error connect to DB:", error)
     }
-})()
+})();
