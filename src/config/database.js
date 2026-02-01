@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 
 const connection = async () => {
     try {
-        await mongoose.connect('mongodb://root:123456@localhost:27017');
-        console.log("hehe thuy xinh gai")
+        await mongoose.connect('mongodb://127.0.0.1:27017/dinhong');
+        console.log("connect to db")
 
     } catch (error) {
         console.log(">>>> Error connection DB:", error)
